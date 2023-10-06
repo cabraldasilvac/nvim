@@ -1,23 +1,35 @@
--- Settings File
-vim.g.mapleader = ' '
-vim.opt.backup = false
-vim.opt.errorbells = false
-vim.opt.swapfile = false 
-vim.opt.signcolumn = 'yes' 
-
--- buffer-scoped
-vim.opt.autoindent = true
-
--- window-scoped
-vim.opt.cursorline = true
-
--- global scope
-vim.opt.autowrite = true
-
+-- Setting Variavel local
+local g = vim.g
 local set = vim.opt
--- Set the behavior of tab
-set.tabstop = 2
-set.shiftwidth = 2
-set.softtabstop = 2
-set.expandtab = true
+local cmd = vim.cmd
+
+-- mapleader key
+g.mapleader = ' '
+
+-- Theme
+g.transparent_enabled = true
+
+-- General Setup
+set.mouse = 'a'
+set.backup = false
+set.errorbells = false
+set.swapfile = false 
+set.autowrite = true
+
+-- Editor
 set.number = true
+set.relativenumber = true
+set.signcolumn = 'yes' 
+set.showmode = false
+set.showmatch = true
+set.splitright = true
+set.cursorline = true
+set.expandtab = true
+set.shiftwidth = 4
+set.tabstop = 4
+set.softtabstop = 2
+set.title = true
+set.mouse = a
+--set.smartindent = true
+set.autoindent = true
+

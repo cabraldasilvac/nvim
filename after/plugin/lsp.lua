@@ -4,7 +4,6 @@ lsp_zero.on_attach(function(client, bufnr)
 lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {'tsserver', 'rust_analyzer', "eslint", "sumneko_lua", "clangd"},
@@ -16,3 +15,19 @@ require('mason-lspconfig').setup({
     end,
   },
 })
+  --  lsp.preset("recommended")
+    lsp_zero.set_preferences({
+      suggest_lsp_servers = false,
+      setup_servers_on_start = true,
+      set_lsp_keymaps = true,
+      configure_diagnostics = true,
+      cmp_capabilities = true,
+      manage_nvim_cmp = true,
+      call_servers = 'local',
+      sign_icons = {
+        error = '✘',
+        warn = '▲',
+        hint = '⚑',
+        info = '',
+      },
+    })

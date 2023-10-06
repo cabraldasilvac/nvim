@@ -40,8 +40,10 @@ return require('packer').startup(function(use)
   }
 }
 
-local lsp = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
-lsp.preset('recommended')
-lsp.setup()
+lsp_zero.preset('recommended')
+lsp_zero.setup()
+
 end)
+
