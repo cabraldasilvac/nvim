@@ -3,6 +3,11 @@ local g = vim.g
 local set = vim.opt
 local cmd = vim.cmd
 
+cmd([[
+  filetype plugin indent on
+  syntax on
+]])
+
 -- mapleader key
 g.mapleader = ' '
 
@@ -30,6 +35,7 @@ set.tabstop = 4
 set.softtabstop = 2
 set.title = true
 set.mouse = a
+set.hidden = true
+
 --set.smartindent = true
 set.autoindent = true
-
