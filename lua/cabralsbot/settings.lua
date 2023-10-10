@@ -2,6 +2,8 @@
 local g = vim.g
 local set = vim.opt
 local cmd = vim.cmd
+local exec = vim.api.nvim_exec
+local fn = vim.fn
 
 cmd([[
   filetype plugin indent on
