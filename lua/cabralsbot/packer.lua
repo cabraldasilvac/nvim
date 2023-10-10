@@ -20,7 +20,9 @@ use {'neoclide/coc.nvim', branch = 'release'}
     use('kyazdani42/nvim-web-devicons')
     use('ryanoasis/vim-devicons')
 
--- Status bar
+-- colorScheme - Theme
+
+--Status bar
 use('vim-airline/vim-airline')
 use('vim-airline/vim-airline-themes')
 
