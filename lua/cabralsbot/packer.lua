@@ -14,12 +14,11 @@ use ({
 
 use('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
 
-use ({
-    'neoclide/coc.nvim', 
---    {'branch': 'release'},
-})
-
-use('kyazdani42/nvim-web-devicons')
+use {'neoclide/coc.nvim', branch = 'release'}
+   
+-- Appearance
+    use('kyazdani42/nvim-web-devicons')
+    use('ryanoasis/vim-devicons')
 
 -- Status bar
 use('vim-airline/vim-airline')
@@ -28,12 +27,11 @@ use('vim-airline/vim-airline-themes')
 use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
-      --- LSP Support
+        --- LSP Support
       {'williamboman/mason.nvim'},
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason-lspconfig.nvim'},
       {'hrsh7th/nvim-cmp'},
-
       -- Autocompletions plugins
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
@@ -52,10 +50,11 @@ use {
   }
 }
 
-local lsp_zero = require('lsp-zero')
+local lsp = require('lsp-zero')
 
-lsp_zero.preset('recommended')
-lsp_zero.setup()
+lsp.preset('recommended')
+lsp.setup()
 
 end)
+
 

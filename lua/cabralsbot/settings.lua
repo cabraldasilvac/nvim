@@ -21,7 +21,7 @@ set.errorbells = false
 set.swapfile = false 
 set.autowrite = true
 
--- Editor
+--Editor
 set.number = true
 set.relativenumber = true
 set.signcolumn = 'yes' 
@@ -34,8 +34,9 @@ set.shiftwidth = 4
 set.tabstop = 4
 set.softtabstop = 2
 set.title = true
-set.mouse = a
 set.hidden = true
 
 --set.smartindent = true
 set.autoindent = true
+
+
