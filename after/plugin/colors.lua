@@ -1,7 +1,7 @@
-function UseColorScheme(color)
-  color = color or "lunaperche" --"industry" --"lunaperche"
-	vim.cmd.colorscheme(color)
-   
-end
+ function UseColorScheme(color)
+   color = color or "torte" --"torte" --"industry" --"lunaperche"
+ 	  vim.cmd.colorscheme(color)
 
-UseColorScheme()
+  end
+
+ UseColorScheme()

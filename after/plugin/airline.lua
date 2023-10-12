@@ -1,11 +1,23 @@
 -- Vim airline configuration
-local g = vim.g
-let g.airline#extensions#tabline#enabled = true
-let g.airline#extensions#tabline#left_sep = ' '
-let g.airline#extensions#tabline#left_alt_sep = '|'
-let g.airline#extensions#tabline#formatter = 'default'
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
+local cmd = vim.cmd
+-- Inclua o módulo Packer.nvim
+local packer = require('packer')
+-- Plugin Airline
+packer.use {
+  ('vim-airline/vim-airline'),
+  ('vim-airline/vim-airline-themes'),
+  
+  config = function()
+      -- Theme
+        cmd('let g:airline_theme = industry')
+    -- Ativar os símbolos de separadores UTF-8
+        cmd('let g:airline_powerline_fonts = 1')
+        cmd('let g:airline_symbols')
+    -- Exibir o nome do arquivo atual no canto direito
+        cmd('let g:airline_section_c = "%f"')
+        cmd('let g:airline_statusline_ontop=1')
+        cmd('let g:airline_extensions tabline left_sep = ""')
+        cmd('let g:airline_extensions_tabline_left_alt_sep = "|"')
 
---let g.airline_theme='simple'
+  end
+}

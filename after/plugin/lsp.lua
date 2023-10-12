@@ -1,22 +1,11 @@
 local lsp = require('lsp-zero')
+
 lsp.preset("recommended")
 
 lsp.on_attach(function(client, bufnr)
 lsp.default_keymaps({buffer = bufnr})
+--
 end)
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'rust_analyzer', 'eslint', 'clangd'},
-  handlers = {
-    lsp.default_setup,
-    lua_ls = function()
-
-local lua_opts = lsp.nvim_lua_ls()
-require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-  },
-})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
@@ -33,3 +22,16 @@ lsp.set_preferences({
         info = '',
       },
     })
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {'tsserver', 'rust_analyzer', 'eslint', 'clangd'},
+  handlers = {
+    lsp.default_setup,
+    lua_ls = function()
+
+local lua_opts = lsp.nvim_lua_ls()
+require('lspconfig').lua_ls.setup(lua_opts)
+    end,
+  },
+})

@@ -1,9 +1,8 @@
 -- Plugin: nvim-treesitter
-
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs.setup')
 if not status_ok then
     return
-  end
+end
 
 configs {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -15,7 +14,7 @@ configs {
 sync_install = false,
 
 ignore_install = { "" },
---auto_install = true,
+auto_install = true,
 highlight = {
     enable = true,
     disble = {""},
@@ -48,6 +47,6 @@ incremental_selection = {
 indent = { enable = true, disable = { "yaml"}},
 
 tree_docs = {
-    enable = true,
-}
+        enable = true,
+    }
 }
