@@ -2,8 +2,8 @@
 local g = vim.g
 local set = vim.opt
 local cmd = vim.cmd
-local exec = vim.api.nvim_exec
-local fn = vim.fn
+--local exec = vim.api.nvim_exec
+--local fn = vim.fn
 
 cmd([[
   filetype plugin indent on
@@ -15,30 +15,36 @@ g.mapleader = ' '
 
 -- Theme
 g.transparent_enabled = true
+--set.termguicolors = true
+cmd [[ set background=dark ]]
+cmd [[ colorscheme torte]]
 
 -- General Setup
 set.mouse = 'a'
 set.backup = false
 set.errorbells = false
-set.swapfile = false 
+set.swapfile = false
 set.autowrite = true
 
---Editor
+-- Editor
 set.number = true
 set.relativenumber = true
-set.signcolumn = 'yes' 
+set.signcolumn = 'yes'
 set.showmode = false
 set.showmatch = true
 set.splitright = true
+set.splitbelow = true
+set.conceallevel = 0
 set.cursorline = true
 set.expandtab = true
 set.shiftwidth = 4
 set.tabstop = 4
-set.softtabstop = 2
+set.softtabstop = 4
 set.title = true
 set.hidden = true
-
---set.smartindent = true
+set.foldmethod = 'marker'
+set.smartindent = true
 set.autoindent = true
-
+set.shortmess:append {c = true}
+set.scrolloff = 10
 

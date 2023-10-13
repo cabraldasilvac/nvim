@@ -25,11 +25,11 @@ lsp.set_preferences({
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver', 'rust_analyzer', 'eslint', 'clangd'},
+  ensure_installed = {'lua_ls','dockerls','tsserver','rust_analyzer','eslint','clangd'},
   handlers = {
     lsp.default_setup,
     lua_ls = function()
-
+        
 local lua_opts = lsp.nvim_lua_ls()
 require('lspconfig').lua_ls.setup(lua_opts)
     end,

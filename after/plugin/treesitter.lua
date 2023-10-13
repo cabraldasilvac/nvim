@@ -8,7 +8,7 @@ configs {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
  ensure_installed = { 
      "c", "lua", "vim", "python3", "cpp", "javascript", "typescript", "java", 
-     "query", "sql", "php", "css", "html", "markdown", "markdown_inline" 
+     "query", "sql", "php", "css", "html", "markdown", "markdown_inline", "composer" 
  },
 
 sync_install = false,

@@ -6,10 +6,9 @@ local packer = require('packer')
 packer.use {
   ('vim-airline/vim-airline'),
   ('vim-airline/vim-airline-themes'),
-  
   config = function()
       -- Theme
-        cmd('let g:airline_theme = industry')
+        cmd('let g:airline_theme = {torte}')
     -- Ativar os símbolos de separadores UTF-8
         cmd('let g:airline_powerline_fonts = 1')
         cmd('let g:airline_symbols')
@@ -18,6 +17,6 @@ packer.use {
         cmd('let g:airline_statusline_ontop=1')
         cmd('let g:airline_extensions tabline left_sep = ""')
         cmd('let g:airline_extensions_tabline_left_alt_sep = "|"')
-
+        cmd('let g:airline_enable_branch = 1')
   end
 }
