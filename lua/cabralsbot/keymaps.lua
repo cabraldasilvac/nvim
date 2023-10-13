@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>V", ":vsplit<CR>", ns)
 
 -- Clean Search
 map("n", "<esc>", ":noh<return><esc>", ns)
-
 map('', '<up>', '<nop>', {noremap = true})
 map('', '<down>', '<nop>', {noremap = true})
 map('', '<left>', '<nop>', {noremap = true})
