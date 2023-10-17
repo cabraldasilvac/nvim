@@ -22,12 +22,22 @@ use('ryanoasis/vim-devicons')
 use('vim-airline/vim-airline')
 use('vim-airline/vim-airline-themes')
 
+-- StatusLine
+use({
+    "nvim-lualine/lualine.nvim",
+    event = "BufEnter",
+    config = function()
+        require("configs.lualine")
+    end,
+    requires = {"nvim-web-devicons"},
+})
+
     -- Terminal ToggleTerm
 use('akinsho/toggleterm.nvim')
 use('tpope/vim-fugitive')
 --
 use('nvim-tree/nvim-tree.lua')
---use('nvim-tree/nvim-web-devicons')
+use('nvim-tree/nvim-web-devicons')
 
 use{
     'VonHeikemen/lsp-zero.nvim',
