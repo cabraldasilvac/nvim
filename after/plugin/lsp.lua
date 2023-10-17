@@ -25,7 +25,7 @@ lsp.set_preferences({
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls','dockerls','tsserver','rust_analyzer','eslint','clangd'},
+  ensure_installed = {'cssls','html','jsonls','tailwindcss','pyright','lua_ls','dockerls','tsserver','rust_analyzer','eslint','clangd'},
   handlers = {
     lsp.default_setup,
     lua_ls = function()
