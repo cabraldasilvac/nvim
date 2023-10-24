@@ -18,6 +18,9 @@ use{'neoclide/coc.nvim', branch = 'release'}
 use('kyazdani42/nvim-web-devicons')
 use('ryanoasis/vim-devicons')
 
+-- Themes
+use('Shatur/neovim-ayu')
+
 -- Status bar
 use('vim-airline/vim-airline')
 use('vim-airline/vim-airline-themes')
