@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
 use('wbthomason/packer.nvim')
 use({
     'nvim-telescope/telescope.nvim',
-	tag = "0.1.0",
+	tag = "0.1.4",
 	requires = { { "nvim-lua/plenary.nvim" }}
 })
 
@@ -53,10 +53,8 @@ use{
         {'hrsh7th/cmp-buffer'},
         {'hrsh7th/cmp-path'},
         {'hrsh7th/cmp-cmdline'},
-        {'saadparwaiz1/cmp_luasnip'},
         {'hrsh7th/cmp-nvim-lsp'},
         {'hrsh7th/cmp-nvim-lua'},
-
       -- Snippets
         {'L3MON4D3/LuaSnip'},
         {'rafamadriz/friendly-snippets'},
