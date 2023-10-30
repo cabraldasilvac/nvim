@@ -15,9 +15,6 @@ g.mapleader = ' '
 
 -- Theme
 g.transparent_enabled = true
---set.termguicolors = true
---cmd [[ set background=dark ]]
---cmd [[ colorscheme torte]]
 
 -- General Setup
 set.mouse = 'a'
