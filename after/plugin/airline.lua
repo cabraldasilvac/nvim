@@ -4,6 +4,7 @@ local cmd = vim.cmd
 local packer = require('packer')
 -- Plugin Airline
 packer.use {
+
   ('vim-airline/vim-airline'),
   ('vim-airline/vim-airline-themes'),
   config = function()
