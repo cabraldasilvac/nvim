@@ -22,6 +22,10 @@ set.backup = false
 set.errorbells = false
 set.swapfile = false
 set.autowrite = true
+set.autoread = true
+-- filetype on
+--filetype plugin on
+--filetype indent on
 
 -- Editor
 set.number = true
@@ -43,5 +47,7 @@ set.foldmethod = 'marker'
 set.smartindent = true
 set.autoindent = true
 set.shortmess:append {c = true}
-set.scrolloff = 10
+set.scrolloff = 8
+set.cmdheight = 2
+set.guifont = "Fira Code:h12"
 

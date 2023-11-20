@@ -18,6 +18,7 @@ use{'neoclide/coc.nvim', branch = 'release'}
 -- Appearance
 use('kyazdani42/nvim-web-devicons')
 use('ryanoasis/vim-devicons')
+use('tribela/vim-transparent')
 
 -- Themes
 use('Shatur/neovim-ayu')
@@ -66,6 +67,8 @@ use{
         {'hrsh7th/cmp-cmdline'},
         {'hrsh7th/cmp-nvim-lsp'},
         {'hrsh7th/cmp-nvim-lua'},
+        {'hrsh7th/cmp-git'},
+        {'windwp/nvim-autopairs'},
       -- Snippets
         {'L3MON4D3/LuaSnip'},
         {'rafamadriz/friendly-snippets'},
