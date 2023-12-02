@@ -4,7 +4,7 @@ lsp_zero.preset("recommended")
 lsp_zero.on_attach(
 function(client, bufnr)
 --    lsp_zero.default_keymaps({buffer = bufnr})
-    local opts = {buffer = bufnr}
+    local opts = { buffer = bufnr, remap = false }
     vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', opts)
     vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', opts)
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
@@ -14,7 +14,7 @@ function(client, bufnr)
     vim.keymap.set('n', '<leader>m', vim.diagnostic.goto_prev, opts)
     vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename, opts)
+-- vim.keymap.set('n', '<leader>vrn', vim.lsj.buf.rename, opts)
     vim.keymap.set('n', '<leader>sh', vim.lsp.buf.signature_help, opts)
 end
 )
