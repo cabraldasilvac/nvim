@@ -1,4 +1,3 @@
--- Plugin: nvim-treesitter
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs.setup')
 if not status_ok then
     return
@@ -6,22 +5,22 @@ end
 
 configs {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
- ensure_installed = {"c", "lua", "vim", "python3", "cpp", "javascript", "typescript", "java", "query", "sql", "php", "css", "html", "markdown", "markdown_inline", "composer",
+ ensure_installed = {"c", "lua", "vim", "python3", "cpp", "javascript", "typescript", "java", "query", "sql", "php", "css", "html", "markdown", "markdown_inline", "composer", "help"
  },
 
 sync_install = false,
-
 ignore_install = { "" },
 auto_install = true,
+
 highlight = {
     enable = true,
-    disble = {""},
     additional_vim_regex_highlighting = false,
 },
 
 autopairs = {
     enable = true,
 },
+
 rainbow = {
     enable = true,
     disable = { "jsx", "cpp", "html" }, --/list of languages you want to disable the plugin for
@@ -30,6 +29,7 @@ rainbow = {
 --  colors = {}, -- table of hex strings
 -- termcolors = {} -- table of colour name strings
 },
+
 autotag = { enable = true },
 incremental_selection = {
     enable = true,
@@ -44,7 +44,5 @@ incremental_selection = {
 
 indent = { enable = true, disable = { "yaml"}},
 
-tree_docs = {
-        enable = true,
-    }
+tree_docs = { enable = true }
 }
