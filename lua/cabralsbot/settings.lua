@@ -23,9 +23,6 @@ set.errorbells = false
 set.swapfile = false
 set.autowrite = true
 set.autoread = true
--- filetype on
---filetype plugin on
---filetype indent on
 
 -- Editor
 set.number = true

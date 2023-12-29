@@ -1,4 +1,3 @@
--- Only required if you have packer configured as `opt`
 vim.cmd.packadd("packer.nvim")
 
 return require('packer').startup(function(use)
@@ -6,6 +5,7 @@ return require('packer').startup(function(use)
 -- Packer can manage itself
 use('wbthomason/packer.nvim')
 use({ 'catppuccin/nvim', as = 'catppuccin' })
+
 use({
     'nvim-telescope/telescope.nvim',
 	tag = "0.1.4",
@@ -32,17 +32,16 @@ use({
     "nvim-lualine/lualine.nvim",
     event = "BufEnter",
     config = function()
-        require("configs.lualine")
+    require("configs.lualine")
     end,
+
     requires = {"nvim-web-devicons"},
 })
 
     -- Terminal ToggleTerm
 use('akinsho/toggleterm.nvim')
 use('tpope/vim-fugitive')
---
 use('nvim-tree/nvim-tree.lua')
-use('nvim-tree/nvim-web-devicons')
 
 use {
   "nvim-neo-tree/neo-tree.nvim",
@@ -58,6 +57,7 @@ use{
     'VonHeikemen/lsp-zero.nvim',
     requires = {
         {'williamboman/mason.nvim'},
+        {'mfussenegger/nvim-jdtls'},
         {'williamboman/mason-lspconfig.nvim'},
         {'neovim/nvim-lspconfig'},
         {'hrsh7th/nvim-cmp'},

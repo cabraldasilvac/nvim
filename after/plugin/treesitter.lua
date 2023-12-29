@@ -5,7 +5,7 @@ end
 
 configs {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
- ensure_installed = {"c", "lua", "vim", "python3", "cpp", "javascript", "typescript", "java", "query", "sql", "php", "css", "html", "markdown", "markdown_inline", "composer", "help"
+     ensure_installed = {"bash", "c", "lua", "vim", "python3", "cpp", "css", "html", "javascript", "typescript", "json", "yaml", "php", "java", "query", "sql", "markdown", "markdown_inline", "composer", "help"
  },
 
 sync_install = false,
@@ -44,5 +44,6 @@ incremental_selection = {
 
 indent = { enable = true, disable = { "yaml"}},
 
-tree_docs = { enable = true }
+tree_docs = { enable = true },
 }
+
