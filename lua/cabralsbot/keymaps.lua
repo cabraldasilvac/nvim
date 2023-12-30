@@ -6,6 +6,8 @@ vim.keymap.set('i', 'jj', '<ESC>', ns)
 vim.keymap.set('n', '<leader>V', ':vsplit<CR>', ns)
 vim.keymap.set('n','tt',':t.<CR>')
 
+vim.keymap.set('n','<C-n>', ':Neotree filesystem reveal left<CR>')
+
 -- Clean Search
 map('n', '<esc>', ':noh<return><esc>', ns)
 map('n', '<up>', '<nop>', {noremap = true})

@@ -8,7 +8,7 @@ use({ 'catppuccin/nvim', as = 'catppuccin' })
 
 use({
     'nvim-telescope/telescope.nvim',
-	tag = "0.1.4",
+	tag = "0.1.5",
 	requires = { { "nvim-lua/plenary.nvim" }}
 })
 
@@ -75,7 +75,13 @@ use{
         {'saadparwaiz1/cmp_luasnip'},
       --Snippet Collection (Optional)
         {'ray-x/lsp_signature.nvim'},
-  }
+  },
+
+use  {
+    "folke/which-key.nvim",
+      require = { "folke/neoconf.nvim", cmd = "Neoconf" },
+        "folke/neodev.nvim",
+},
 }
 
 end)
