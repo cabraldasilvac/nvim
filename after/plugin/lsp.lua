@@ -1,7 +1,8 @@
-local lsp_zero = require('lsp-zero')
-lsp_zero.preset("recommended")
+local lsp = require('lsp-zero')
 
-lsp_zero.on_attach(
+lsp.preset("recommended")
+
+lsp.on_attach(
 function(client, bufnr)
 --    lsp_zero.default_keymaps({buffer = bufnr})
     local opts = { buffer = bufnr, remap = false }
@@ -19,7 +20,7 @@ function(client, bufnr)
 end
 )
 -- Diagnostic icons
-lsp_zero.set_sign_icons({
+lsp.set_sign_icons({
   error = '✘',
   warn = '▲',
   hint = '⚑',
@@ -27,13 +28,15 @@ lsp_zero.set_sign_icons({
 })
 --
 require('mason').setup({})
+
 require('mason-lspconfig').setup({
 ensure_installed = {'cssls','html','jsonls','tailwindcss','pyright','lua_ls','dockerls','tsserver','rust_analyzer','eslint','clangd'},
+
 handlers = {
-    lsp_zero.default_setup,
+    lsp.default_setup,
     lua_ls = function()
 
-local lua_opts = lsp_zero.nvim_lua_ls()
+local lua_opts = lsp.nvim_lua_ls()
 require('lspconfig').lua_ls.setup(lua_opts)
     end,
   },
