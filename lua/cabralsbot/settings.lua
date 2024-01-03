@@ -48,3 +48,7 @@ set.scrolloff = 8
 set.cmdheight = 2
 set.guifont = "Fira Code:h12"
 
+-- require('telescope').load_extension('fzf')
+-- require('telescope').load_extension('coc')
+
+

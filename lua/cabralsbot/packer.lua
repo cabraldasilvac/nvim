@@ -8,8 +8,13 @@ use({ 'catppuccin/nvim', as = 'catppuccin' })
 use({
         'nvim-telescope/telescope.nvim',
     	tag = "0.1.5",
-    	requires = { { "nvim-lua/plenary.nvim"} },
+    	requires = {
+            {"nvim-lua/plenary.nvim"},
+            {'nvim-lua/popup.nvim'}
+    },
 })
+
+use('nvim-telescope/telescope-fzf-native.nvim', { run = ':make'})
 
 use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 
@@ -32,7 +37,7 @@ use({
     "nvim-lualine/lualine.nvim",
     event = "BufEnter",
     config = function()
-    require("configs.lualine")
+    require = ("configs.lualine")
     end,
 
     requires = {"nvim-web-devicons"},
