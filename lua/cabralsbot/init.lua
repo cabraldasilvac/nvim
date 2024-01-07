@@ -2,6 +2,5 @@
 require("cabralsbot.packer")
 require("cabralsbot.settings")
 require("cabralsbot.keymaps")
-require("cabralsbot.lazy")
-
+--require("cabralsbot.lazy")
 

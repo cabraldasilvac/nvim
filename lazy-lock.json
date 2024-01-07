@@ -1,0 +1,4 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "vim-nightfly-guicolors": { "branch": "master", "commit": "b1a90267fed87a529f30c4d5ce0687d041b2f466" }
+}
